@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Georgia, serif;
+            background-color: #f8f8f8;
+        }
+        #message {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        #gif {
+            width: 300px;
+            height: 300px;
+            background-image: url(https://media.tenor.com/GpC0Mty4Z8wAAAAi/mochi-mochi-peach-cat-peach-cat.gif);
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+        #buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #no {
+            background-color: #f44336;
+            color: white;
+        }
+        #popup {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Hey! Are you mad po ba, baby?</div>
+    <div id="gif"></div>
+    <div id="buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+    <div id="popup">Why? Please tell me the reason by messaging me, my love. I miss you na sobra. <a href="https://www.m.me/BautistaMJ05">Message me</a></div>
+
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'block';
+        });
+        document.getElementById('no').addEventListener('click', function() {
+            this.style.position = 'absolute';
+            this.style.left = Math.random() * window.innerWidth + 'px';
+            this.style.top = Math.random() * window.innerHeight + 'px';
+        });
+    </script>
+</body>
+</html>
